@@ -2,9 +2,7 @@ package com.prodev.code.test.entity;
 
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -48,7 +46,9 @@ public class Product {
 	 * 
 	 */
 	private double unitPrice;
+	
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<OrderItems> orderitems = new ArrayList<>();
+	
 
 }

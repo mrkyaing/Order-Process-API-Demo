@@ -17,9 +17,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * 
- */
 @Entity
 @Table(name = "orderItems")
 @Getter
@@ -34,15 +31,8 @@ public class OrderItems {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-
-	/**
-	 * 
-	 */
 	private int quantity;
 
-	/**
-	 * 
-	 */
 	private double total;
 
 	@ManyToOne
@@ -57,5 +47,4 @@ public class OrderItems {
     private Product product;
 	
 	
-
 }
