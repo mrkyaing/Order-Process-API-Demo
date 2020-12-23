@@ -1,8 +1,10 @@
 package com.prodev.code.test.entity;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -57,6 +59,6 @@ public class Orders {
 	
 	
 	@OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
-    private Set<OrderItems> orderitems = new HashSet<>();
+    private List<OrderItems> orderitems = new ArrayList<>();
 
 }
