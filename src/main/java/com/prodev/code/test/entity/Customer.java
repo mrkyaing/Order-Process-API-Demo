@@ -51,10 +51,4 @@ public class Customer {
 
 	private String address;
 	
-
-	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    private List<Orders> order = new ArrayList<>();
-
-	
-	
 }

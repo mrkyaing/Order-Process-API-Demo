@@ -7,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -18,7 +17,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "orderItems")
 @Getter
 @Setter
 @Builder
@@ -39,7 +37,6 @@ public class OrderItems {
     @JoinColumn(name = "ordersId")//to create foreign key ordersId in orderitmes table 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Orders orders;
-	
 	
 	@ManyToOne
     @JoinColumn(name = "productId")//to create foreign key productId in orderitmes table 

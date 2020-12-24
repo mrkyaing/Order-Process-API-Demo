@@ -48,16 +48,15 @@ public class CustomerController {
 	@DeleteMapping("{id}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public void deleteById(@PathVariable("id") Long id) {
-
 		this.service.delete(id);
 	}
+
 	@GetMapping
 	public ResponseEntity<List<Customer>> getAll() {
-
 		List<Customer> productlist =this.service.getAll();
-
 		return new ResponseEntity<>(productlist, HttpStatus.OK);
 	}
+
 	@GetMapping("/{id}")
 	public ResponseEntity<Customer> getById(@PathVariable("id") Long id){
 		Customer product=this.service.getById(id);
