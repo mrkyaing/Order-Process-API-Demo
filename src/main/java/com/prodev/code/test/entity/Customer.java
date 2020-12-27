@@ -48,7 +48,9 @@ public class Customer {
 
 	private String phone;
 
-
 	private String address;
+	@OneToMany(mappedBy = "customer")
+	private List<Orders> ordersList=new ArrayList<>();
+
 	
 }
